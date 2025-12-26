@@ -61,3 +61,17 @@ module tb;
 			end
 endmodule
 
+
+module parity_detection(input [3:0]data,output parity);
+function p();
+input [3:0]d;
+	begin
+		p=^d;
+	end
+	endfunction
+assign parity=p(data);
+endmodule
+
+
+
+
