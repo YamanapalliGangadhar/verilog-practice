@@ -127,6 +127,35 @@ module test;
 			end
 	end
 endmodule 
+
+
+pyramid
+#       1 
+#      2 2 
+#     3 3 3 
+#    4 4 4 4 
+#   5 5 5 5 5 
+
+
+module test;
+	integer i,j;
+	initial begin
+		for(i=1;i<6;i=i+1)
+			begin
+				for(j=6;j>=i;j=j-1)
+					begin
+						$write(" ");
+					end
+				
+				for(j=1;j<=i;j=j+1)
+				begin
+					$write("%0d ",i);
+					end
+					$display("");
+			end
+	end
+endmodule 
+	
 	
 
 	
