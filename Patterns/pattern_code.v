@@ -103,6 +103,32 @@ module pyramid();
 		end
 	endmodule
 
+//reverse pyramid
+#  5 5 5 5 5 
+#   4 4 4 4 
+#    3 3 3 
+#     2 2 
+#      1 
+module test;
+	integer i,j;
+	initial begin
+		for(i=1;i<6;i=i+1)
+			begin
+				for(j=1;j<=i;j=j+1)
+					begin
+						$write(" ");
+					end
+				//for(j=6-i;j>=1;j=j-1)
+				for(j=1;j<=6-i;j=j+1)
+				begin
+					$write("%0d ",6-i);
+					end
+					$display("");
+			end
+	end
+endmodule 
+	
+
 	
 	 
 
